@@ -7,7 +7,7 @@ import 'package:tech_news_application/widgets/searchbar.dart';
 
 Future<List> fetchNews() async {
   final response = await http.get(Uri.parse(
-      'https://newsapi.org/v2/top-headlines?country=us&category=technology&pageSize=100&apiKey=${ApiKey.key}${SearchBarWidget.searchController.text}'));
+      'https://newsapi.org/v2/top-headlines?category=technology&pageSize=100&apiKey=${ApiKey.key}${SearchBarWidget.searchController.text}'));
 
   Map result = jsonDecode(response.body);
   print('fetched');
